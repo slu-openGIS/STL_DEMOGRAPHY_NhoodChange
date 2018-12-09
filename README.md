@@ -8,7 +8,7 @@
 [![DOI](https://zenodo.org/badge/128544391.svg)](https://zenodo.org/badge/latestdoi/128544391)
 
 ### Abstract
-This repository contains a map image of neighborhoods in St. Louis, Missouri, colored by the estimated poopulation change between 2010 and 2017. 
+This repository contains a map image of neighborhoods in St. Louis, Missouri, colored by the estimated poopulation change between 2010 and 2017. See my [dataviz gallery](https://chris-prener.github.io/dataviz/project/stl-pop-change/) for additional details.
 
 ### Preview
 ![](results/2017/nhoodMap-trans.png)
