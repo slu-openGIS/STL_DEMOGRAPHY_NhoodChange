@@ -1,37 +1,20 @@
-# STL_HEALTH_Lead
+# STL_DEMOGRAPHY_NhoodChange
 
-[![](https://img.shields.io/badge/extent-st.%20louis%20city-red.svg)](https://github.com/slu-soc1120/STL_HEALTH_Lead/)
-[![](https://img.shields.io/badge/category-health-orange.svg)](https://github.com/slu-soc1120/STL_HEALTH_Lead/)
-[![](https://img.shields.io/github/release/slu-soc1120/STL_HEALTH_Lead.svg?label=version)](https://github.com/slu-soc1120/STL_HEALTH_Lead/releases)
-[![](https://img.shields.io/github/last-commit/slu-soc1120/STL_HEALTH_Lead.svg)](https://github.com/slu-soc1120/STL_HEALTH_Lead/commits/master)
-[![](https://img.shields.io/github/repo-size/slu-soc1120/STL_HEALTH_Lead.svg)](https://github.com/slu-soc1120/STL_HEALTH_Lead/)
+[![](https://img.shields.io/badge/extent-st.%20louis%20city-red.svg)](https://github.com/chris-prener/STL_DEMOGRAPHY_NhoodChange/)
+[![](https://img.shields.io/badge/category-demography-orange.svg)](https://github.com/chris-prener/STL_DEMOGRAPHY_NhoodChange/)
+[![](https://img.shields.io/github/release/chris-prener/STL_DEMOGRAPHY_NhoodChange.svg?label=version)](https://github.com/chris-prener/STL_DEMOGRAPHY_NhoodChange/releases)
+[![](https://img.shields.io/github/last-commit/chris-prener/STL_DEMOGRAPHY_NhoodChange.svg)](https://github.com/chris-prener/STL_DEMOGRAPHY_NhoodChange/commits/master)
+[![](https://img.shields.io/github/repo-size/chris-prener/STL_DEMOGRAPHY_NhoodChange.svg)](https://github.com/chris-prener/STL_DEMOGRAPHY_NhoodChange/)
 [![DOI](https://zenodo.org/badge/128544391.svg)](https://zenodo.org/badge/latestdoi/128544391)
 
 ### Abstract
-This repository contains a map image of census tracts in St. Louis, Missouri, colored by the estimated number of high blood lead tests over the 2010-2015 period. The repository also contains a variety of plots describing high lead exposure in St. Louis and two demographic correlates - race and poverty. 
-
-Unlike adults, who tend to be exposed to lead in the workplace, childrens' exposures tend to be enviornmental through their homes or schools. The CDC's "level of concern" for a high test is [5 micrograms per deciliter](https://www.cdc.gov/nceh/lead/acclpp/lead_levels_in_children_fact_sheet.pdf) of lead in blood. 
-
-These data were obtained from Reuters' reporting on this topic. I use this map on the first day of class for introducing major themes, for teaching about race and health, and for discussing urban health issues.
+This repository contains a map image of neighborhoods in St. Louis, Missouri, colored by the estimated poopulation change between 2010 and 2017. 
 
 ### Preview
-![](results/maps/leadMap-trans.png)
-
-![](results/plots/raceScatter-white.png)
-
-### Related Readings
-* [Unsafe at Any Level](https://www.reuters.com/investigates/special-report/usa-lead-testing/) - original Reuters' article
-* [Sampson and Winter 2016](https://www.cambridge.org/core/journals/du-bois-review-social-science-research-on-race/article/racial-ecology-of-lead-poisoning/F39AF4724258606DCC1CDA369DC08707)
+![](results/2017/nhoodMap-trans.png)
 
 ### Citing These Images
 This repository is associated with a [Digital Object Identifier](https://en.wikipedia.org/wiki/Digital_object_identifier) (or DOI). Please include the DOI when citing these images. You can find pre-formatted citations and a BibTeX entry, among other citation resources, on the associated [Zenodo release page]().
 
-## About SOC 1120: Introduction to Sociology - Diversity and Health Emphasis
-### Course Description
-This course is a specialized section of Introduction to Sociology offered at [Saint Louis University](http://wwww.slu.edu). It uses health examples to highlight course topics throughout the semester, continually emphasizing the ways in which inequality and the social determinants of health shape American life.
-
-### About Christopher Prener, Ph.D.
+## About Christopher Prener, Ph.D.
 Chris is an urban and medical sociologist with an interest in mixed methods research designs that incorporate spatial data. His dissertation examined the effect of neighborhood context and conditions on emergency medical services work, particularly with patients who have mental illnesses or substance use disorders. He is also part of a research team examining the effects of literacy on mental health service use and recovery, and his student research team is documenting the effects of systemic street closures in St. Louis. He is an Assistant Professor in the Department of Sociology and Anthropology at Saint Louis University. More details are available at [his website](https://chris-prener.github.io) and he can be contacted at [chris.prener@slu.edu](mailto:chris.prener@slu.edu).
-
-### About Saint Louis University <img src="https://slu-soc5650.github.io/images/sluLogo.png" align="right" />
-Founded in 1818, [Saint Louis University](http://wwww.slu.edu) is one of the nation’s oldest and most prestigious Catholic institutions. Rooted in Jesuit values and its pioneering history as the first university west of the Mississippi River, SLU offers nearly 13,000 students a rigorous, transformative education of the whole person. At the core of the University’s diverse community of scholars is SLU’s service-focused mission, which challenges and prepares students to make the world a better, more just place.
