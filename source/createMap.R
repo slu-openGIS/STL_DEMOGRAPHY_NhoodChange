@@ -24,15 +24,16 @@ left_join(stl10, stl17, by = "GEOID") %>%
   st_transform(crs = 26915) -> stlPop
 
 # interpolate to neighborhood boundaries and calculate population change
-st_read("data/BND_Nhd88_cw.shp", stringsAsFactors = FALSE) %>%
+st_read("data/STL_BOUNDARY_Nhoods/STL_BOUNDARY_Nhoods.shp", stringsAsFactors = FALSE) %>%
   st_transform(crs = 26915) %>%
   select(NHD_NUM, NHD_NAME) %>%
-  aw_interpolate(tid = NHD_NUM, source = stlPop, sid = GEOID, output = "sf", "pop10", "pop17") %>%
+  aw_interpolate(tid = NHD_NUM, source = stlPop, sid = GEOID, 
+                 weight = "sum", output = "sf", extensive = c("pop10", "pop17")) %>%
   mutate(popChange = ((pop17-pop10)/pop10)*100) -> nhoodPop
 
 ## load other data for mapping
-city <- st_read("data/STL_BOUNDARY_City.shp", stringsAsFactors = FALSE)
-highway <- st_read("data/STL_TRANS_PrimaryRoads.shp", stringsAsFactors = FALSE)
+city <- st_read("data/STL_BOUNDARY_City/STL_BOUNDARY_City.shp", stringsAsFactors = FALSE)
+highway <- st_read("data/STL_TRANS_PrimaryRoads/STL_TRANS_PrimaryRoads.shp", stringsAsFactors = FALSE)
 
 ## calculate breaks manually
 nhoodPop %>%
@@ -64,18 +65,18 @@ map01 <- base +
   theme_gray(base_size = 24) + 
   theme(plot.caption = element_text(hjust = "0"))
 
-cp_plotSave(filename = "results/2017/nhoodMap-base.png", plot = map01, preset = "lg", dpi = 500)
+cp_plotSave(filename = "results/from2010/2017/nhoodMap-base.png", plot = map01, preset = "lg", dpi = 500)
 
 ## map 2 - sequoia theme with white background
 map02 <- base + 
   cp_sequoiaTheme(background = "white", base_size = 24, map = TRUE)
 
-cp_plotSave(filename = "results/2017/nhoodMap-white.png", plot = map02, preset = "lg", dpi = 500)
+cp_plotSave(filename = "results/from2010/2017/nhoodMap-white.png", plot = map02, preset = "lg", dpi = 500)
 
 
 ## map 3 - sequoia theme with transparent background
 map03 <- base + 
   cp_sequoiaTheme(background = "transparent", base_size = 24, map = TRUE)
 
-cp_plotSave(filename = "results/2017/nhoodMap-trans.png", plot = map03, preset = "lg", dpi = 500)
+cp_plotSave(filename = "results/from2010/2017/nhoodMap-trans.png", plot = map03, preset = "lg", dpi = 500)
 
