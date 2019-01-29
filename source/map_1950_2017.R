@@ -30,6 +30,7 @@ read_csv("data/STL_DEMOGRAPHICS_pop50/STL_DEMOGRAPHICS_pop50.csv") %>%
 # open neighborhood data
 st_read("data/STL_BOUNDARY_Nhoods/STL_BOUNDARY_Nhoods.shp", stringsAsFactors = FALSE) %>%
   st_transform(crs = 26915) %>%
+  filter(NHD_NUM <= 79) %>%
   select(NHD_NUM, NHD_NAME) -> nhoods
 
 # interpolate 1950 data
@@ -46,6 +47,13 @@ nhoods %>%
 # join
 left_join(nhoods50, nhoods17, by = "NHD_NUM") %>%
   mutate(popChange = ((pop17-pop50)/pop50)*100) -> nhoodPop
+
+# calculate area
+nhoodPop %>%
+  mutate(AREA = as.numeric(st_area(geometry))) -> nhoodPop
+
+# export data
+st_write(nhoodPop, "data/STL_DEMOGRAPHICS_Nhoods/STL_DEMOGRAPHICS_Nhoods.shp", delete_dsn = TRUE)
 
 # calculate breaks
 ## calculate breaks manually
