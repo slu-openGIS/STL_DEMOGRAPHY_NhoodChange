@@ -73,6 +73,7 @@ highway <- st_read("data/STL_TRANS_PrimaryRoads/STL_TRANS_PrimaryRoads.shp", str
 
 # create base map
 base <- ggplot() + 
+  geom_sf(data = city, fill = "#ffffff", color = NA) +
   geom_sf(data = nhoodPop, mapping = aes(fill = breaks), color = "#000000") + 
   geom_sf(data = highway, mapping = aes(color = "Highways"), size = 1.5, fill = NA) +
   geom_sf(data = city, fill = NA, color = "#000000", size = .25) +
